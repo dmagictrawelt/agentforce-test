@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Agent Force Test</title>
+</head>
+<body>
+    <h1>Salesforce Agent Force Test</h1>
+
+    <script type='text/javascript'>
+        function initEmbeddedMessaging() {
+            try {
+                embeddedservice_bootstrap.settings.language = 'en_US';
+
+                embeddedservice_bootstrap.init(
+                    '00D0900000E9Yey',
+                    'Traveo_Agent',
+                    'https://traveo2023.my.site.com/ESWTraveoAgent1749643607464',
+                    {
+                        scrt2URL: 'https://traveo2023.my.salesforce-scrt.com'
+                    }
+                );
+            } catch (err) {
+                console.error('Error loading Embedded Messaging: ', err);
+            }
+        }
+    </script>
+    <script type='text/javascript' src='https://traveo2023.my.site.com/ESWTraveoAgent1749643607464/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+</body>
+</html>
